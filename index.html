@@ -273,7 +273,7 @@
     }
 
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + slideImages.length)% slideImages.length;
+        currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
         showSlide();
     }
 
@@ -288,10 +288,8 @@
     <img id="Slide" src="Slide1.JPG" alt="Slide1" style ="width:100%; max-width:800px;">
 
 <div class="button-container">
-    <button class="button-container">
-        <button class="button" onclick="prevSlide()">Previous</button>
-        <button class="button" onclick="nextSlide()">Next</button>
-    </button>
+    <button class="button" onclick="prevSlide()">Previous</button>
+    <button class="button" onclick="nextSlide()">Next</button>
 </div>
 
 <div class="slide-number-container">
