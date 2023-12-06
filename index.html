@@ -1,4 +1,6 @@
-<!DOCTYPE html> 
+
+  </html>
+    <!DOCTYPE html> 
 
 <html> 
     
@@ -248,40 +250,45 @@ p.ex1 {
 <h3 style= "font-family:calibri; color: white;"><b>Conference presentation: How ancient Nepalese Temples bested the Gorkha Earthquake and the test of time</b></h3>
 <script>     
     var slideImages = ["Slide1.JPG", "Slide2.JPG", "Slide3.JPG", "Slide4.JPG", "Slide5.JPG"]
-    var currentslide = 0;
+    var currentSlide = 0;
 
     function showSlide() {
-        document.getElementById('slide').src = slideImages[currentSlide];
+        document.getElementById('Slide').src = slideImages[currentSlide];
     }
 
     function nextSlide() {
         currentSlide = (currentSlide + 1)% slideImages.length;
-        showslide();
+        showSlide();
     }
 
     function prevSlide() {
-        currentSlide = (currentSlide - 1 +currentSlide = slideImages.length)% slideImages.length;
-        showslide();
+        currentSlide = (currentSlide - 1 + slideImages.length)% slideImages.length;
+        showSlide();
     }
-    showslide()
+
+    function showSlideNumber(slideNumber) {
+        currentSlide = slideNumber-1;
+        showSlide();
+    }
+    showSlide()
 </script>
 
 <div id="slide-container">
-    <img id="slide" src="Slide1.JPG" alt="Slide1" style ="width:100%; max-width:800px;">
+    <img id="Slide" src="Slide1.JPG" alt="Slide1" style ="width:100%; max-width:800px;">
 
 <div class="button-container">
     <button class="button-container">
-        <button class="button" onclick="prevslide()">Previous</button>
+        <button class="button" onclick="prevSlide()">Previous</button>
         <button class="button" onclick="nextSlide()">Next</button>
     </button>
 </div>
 
 <div class="slide-number-container">
-    <button class="button" onclick="showSlideNumber1()">1</button>    
-    <button class="button" onclick="showSlideNumber2()">2</button> 
-    <button class="button" onclick="showSlideNumber3()">3</button> 
-    <button class="button" onclick="showSlideNumber4()">4</button> 
-    <button class="button" onclick="showSlideNumber5()">5</button>
+    <button class="button" onclick="showSlideNumber(1)">1</button>    
+    <button class="button" onclick="showSlideNumber(2)">2</button> 
+    <button class="button" onclick="showSlideNumber(3)">3</button> 
+    <button class="button" onclick="showSlideNumber(4)">4</button> 
+    <button class="button" onclick="showSlideNumber(5)">5</button>
 </div>
 
 <style>
